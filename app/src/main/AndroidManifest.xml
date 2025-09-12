@@ -16,6 +16,12 @@
             android:name=".HomeActivity"
             android:theme="@style/Theme.Pateikums"/>
         <activity
+            android:name=".ViensActivity"
+            android:theme="@style/Theme.Pateikums"/>
+        <activity
+            android:name=".DiviActivity"
+            android:theme="@style/Theme.Pateikums"/>
+        <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Pateikums">

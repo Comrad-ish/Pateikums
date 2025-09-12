@@ -13,14 +13,13 @@ import com.packy.pateikums.viewmodel.EventViewModel
 import com.google.android.material.appbar.MaterialToolbar
 import androidx.appcompat.widget.Toolbar
 
-class HomeActivity : AppCompatActivity() {
-
+class DiviActivity : AppCompatActivity() {
     private val viewModel: EventViewModel by viewModels()
     private lateinit var adapter: EventAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_layout)
+        setContentView(R.layout.simple_category_layout)
 
         // Toolbar
         val toolbar: MaterialToolbar = findViewById(R.id.topAppBar)

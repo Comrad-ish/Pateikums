@@ -6,21 +6,18 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.packy.pateikums.ui.EventAdapter
 import com.packy.pateikums.viewmodel.EventViewModel
+import kotlin.getValue
 
-//toolbar imports
-import com.google.android.material.appbar.MaterialToolbar
-import androidx.appcompat.widget.Toolbar
-
-class HomeActivity : AppCompatActivity() {
-
+class ViensActivity : AppCompatActivity() {
     private val viewModel: EventViewModel by viewModels()
     private lateinit var adapter: EventAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_layout)
+        setContentView(R.layout.simple_category_layout)
 
         // Toolbar
         val toolbar: MaterialToolbar = findViewById(R.id.topAppBar)

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.packy.pateikums.databinding.ItemEventBinding
 import com.packy.pateikums.model.Event
+import android.text.Html
 
 class EventAdapter(private var events: List<Event>) :
     RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
@@ -23,6 +24,7 @@ class EventAdapter(private var events: List<Event>) :
         holder.binding.title.text = event.title
         holder.binding.date.text = event.date ?: ""
         holder.binding.thumbnail.load(event.thumbnail)
+        holder.binding.description.text = android.text.Html.fromHtml(event.content, Html.FROM_HTML_MODE_COMPACT)
     }
 
     override fun getItemCount() = events.size

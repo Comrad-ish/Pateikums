@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/category_viens"
+        android:title="Kategorija viens" />
+    <item
+        android:id="@+id/category_divi"
+        android:title="Kategorija divi" />
+
+</menu>
