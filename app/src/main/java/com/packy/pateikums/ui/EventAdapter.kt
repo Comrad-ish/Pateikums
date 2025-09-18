@@ -11,6 +11,7 @@ import android.text.Html
 class EventAdapter(private var events: List<Event>) :
     RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
+    private var originalEvents: List<Event> = events
     inner class EventViewHolder(val binding: ItemEventBinding) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -30,7 +31,17 @@ class EventAdapter(private var events: List<Event>) :
     override fun getItemCount() = events.size
 
     fun updateData(newEvents: List<Event>) {
+        originalEvents = newEvents
         events = newEvents
+        notifyDataSetChanged()
+    }
+
+    fun filterByTag(tag: String) {
+        events = if (tag == "All") {
+            originalEvents
+        } else {
+            originalEvents.filter { it.tags.contains(tag) }
+        }
         notifyDataSetChanged()
     }
 }
