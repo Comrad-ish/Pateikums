@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryColor">#6200EE</color>
     <color name="primaryDarkColor">#3700B3</color>
-    <color name="secondaryColor">#03DAC5</color>
+    <color name="secondaryColor">#95E6DA</color>
     <color name="backgroundColor">#B9E1FF</color>
-    <color name="textColor">#CFF4FF</color>
+    <color name="backgroundColor2">#D7E0F0</color>
+    <color name="textColor">#B4FFF9</color>
 </resources>

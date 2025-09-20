@@ -24,6 +24,7 @@ class EventAdapter(private var events: List<Event>) :
         val event = events[position]
         holder.binding.title.text = event.title
         holder.binding.date.text = event.date ?: ""
+        holder.binding.time.text = event.time ?: ""
         holder.binding.thumbnail.load(event.thumbnail)
         holder.binding.description.text = android.text.Html.fromHtml(event.content, Html.FROM_HTML_MODE_COMPACT)
     }

@@ -39,7 +39,7 @@ class HomeActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
         }
-
+        /*
         toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.category_viens -> {
@@ -53,6 +53,8 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+        */
+
     }
 
     private fun setupRecyclerView() {

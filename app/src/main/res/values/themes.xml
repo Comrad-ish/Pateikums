@@ -9,9 +9,6 @@
 
         <item name="android:colorBackground">@color/backgroundColor</item>
         <item name="android:textColorPrimary">@color/textColor</item>
-        <!-- Surface + text colors for CardViews, etc -->
-        <item name="colorSurface">@color/backgroundColor</item>
-        <item name="colorOnSurface">@color/textColor</item>
     </style>
 
     <style name="Theme.Pateikums" parent="Base.Theme.Pateikums" />
