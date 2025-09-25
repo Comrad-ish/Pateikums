@@ -18,11 +18,10 @@
         android:titleTextColor="@color/textColor"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- RecyclerView for events -->
     <Spinner
         android:id="@+id/tagSpinner"
-        android:layout_width="127dp"
-        android:layout_height="37dp"
+        android:layout_width="181dp"
+        android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/spinner_background"
         android:padding="8dp"
@@ -31,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
 
+    <!-- RecyclerView for events -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/eventsRecyclerView"
         android:layout_width="0dp"

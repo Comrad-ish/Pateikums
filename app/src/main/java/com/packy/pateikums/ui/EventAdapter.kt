@@ -38,7 +38,7 @@ class EventAdapter(private var events: List<Event>) :
     }
 
     fun filterByTag(tag: String) {
-        events = if (tag == "All") {
+        events = if (tag == "--Visi notikumi--") {
             originalEvents
         } else {
             originalEvents.filter { it.tags.contains(tag) }

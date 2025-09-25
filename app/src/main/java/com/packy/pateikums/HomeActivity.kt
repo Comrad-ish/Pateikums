@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
 import com.packy.pateikums.ui.EventAdapter
 import com.packy.pateikums.viewmodel.EventViewModel
+import androidx.appcompat.app.AppCompatDelegate
 
 class HomeActivity : AppCompatActivity() {
 
@@ -21,6 +22,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Force Light Mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.home_layout)
 
         setupToolbar()
@@ -69,7 +72,7 @@ class HomeActivity : AppCompatActivity() {
         val tags = mutableSetOf<String>()
         events.forEach { tags.addAll(it.tags) }
 
-        val tagList = listOf("All") + tags.sorted()
+        val tagList = listOf("--Visi notikumi--") + tags.sorted()
 
         val spinnerAdapter = ArrayAdapter(
             this,
