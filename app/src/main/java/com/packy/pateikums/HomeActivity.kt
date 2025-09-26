@@ -82,6 +82,17 @@ class HomeActivity : AppCompatActivity() {
 
         spinner.adapter = spinnerAdapter
 
+        // Set default to --Svarīgākie-- if it exists
+        val defaultIndex = tagList.indexOf("--Svarīgākie--")
+        if (defaultIndex >= 0) {
+            spinner.setSelection(defaultIndex)
+            adapter.filterByTag("--Svarīgākie--")
+        }else {
+            // fallback to --VISI-- if --Svarīgākie-- not in tags
+            spinner.setSelection(0)
+            adapter.filterByTag("--VISI--")
+        }
+
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
