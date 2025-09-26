@@ -79,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
             android.R.layout.simple_spinner_item,
             tagList
         ).also { it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
-
+        spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item) // for dropdown items
         spinner.adapter = spinnerAdapter
 
         // Set default to --Svarīgākie-- if it exists
